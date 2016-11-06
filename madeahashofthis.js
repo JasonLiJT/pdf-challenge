@@ -31,17 +31,17 @@ function testpw(input){
       && hash(input.substr(0, 5)) == 51848940
       && hash(input.substr(5, 5)) == 572630241
       && hash(input.substr(10, 5)) == 131805636) {
-  alert("Yes! The 5th passcode is: " + input);
+  console.log("Yes! The 5th passcode is: " + input);
   } else if (input.length > 0) {
-  alert("No. The 5th passcode is not: " + input);
+  console.log("No. The 5th passcode is not: " + input);
   } else {
-  alert("This button works!");
+  console.log("This button works!");
   }
 }
 
-var t = performance.now()
+// var t = performance.now()
 anti_hash(51848940);
 anti_hash(572630241);
 anti_hash(131805636);
-console.log('Time spent: ' + (performance.now() - t) + ' ms')
+// console.log('Time spent: ' + (performance.now() - t) + ' ms')
 testpw('madeahashofthis')
