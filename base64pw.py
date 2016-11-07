@@ -17,7 +17,8 @@ for shift in range(26):
     for c in s:
         if c.isalpha():
             n = (ord(str(c)) + shift)
-            if n > ord('z'):
+            if ((n > ord('z') and c.islower()) or
+                    (n > ord('Z') and c.isupper())):
                 n -= 26
             lst.append(chr(n))
         else:
